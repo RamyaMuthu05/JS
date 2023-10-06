@@ -1,0 +1,65 @@
+<LAYER NAME="layer1" WIDTH=400 LEFT=250 TOP=10
+BGCOLOR="orange" Z-INDEX=2>
+<H1> This is layer 1 </H1>
+With a little text
+</LAYER>
+<LAYER NAME="layer2" WIDTH=400 LEFT=350 TOP=50
+BGCOLOR="blue" Z-INDEX=1>
+<H1> This is layer 2 </H1>
+With a little text
+</LAYER>
+<FORM>
+<INPUT TYPE="button" VALUE="LAYER 2 ON TOP"
+onclick="layers.layer2.moveAbove(layers.layer1)">
+<P>
+<INPUT TYPE="button" VALUE="LAYER 1 ON TOP"
+onclick="layers.layer1.moveAbove(layers.layer2)">
+</FORM>
+
+<LAYER NAME="A">
+    ......... parent layer text .......
+    <LAYER NAME="B">
+    ............. child layer 1 text .......
+    </LAYER>
+    <LAYER NAME="C">
+    ............. child layer 2 text .......
+    </LAYER>
+    </LAYER>
+
+    <LAYER NAME="layer1" LEFT=360 TOP=176
+BGCOLOR="#ffff00" > <BR>
+<H1> This text is in layer 1 </H1> <BR>
+<LAYER NAME="layer1A" LEFT=72 TOP=80
+VISIBILITY=show BGCOLOR="#8888ff">
+This text is in layer 1A
+</LAYER></LAYER>
+<FORM>
+<INPUT TYPE="button" VALUE="LEFT"
+onclick="layers.layer1.left -=10">
+<INPUT TYPE="button" VALUE="RIGHT"
+onclick="layers.layer1.left +=10">
+<INPUT TYPE="button" VALUE="UP"
+onclick="layers.layer1.top -=10">
+<INPUT TYPE="button" VALUE="Down"
+onclick="layers.layer1.top+=10">
+</FORM>
+<FORM NAME="layerform">
+<INPUT TYPE="button" VALUE="offset()"
+onclick="layers.layer1.offset(-100,100)" >
+<INPUT TYPE="button" VALUE="MoveTo()"
+onclick="layers.layer1.moveTo(0,300)">
+</FORM>
+
+<FORM NAME="layerform">
+    <B>Layer 1 : <B> <BR>
+    <INPUT TYPE="button" VALUE="Hide "
+    onclick="layers.layer1.visibility='hide'">
+    <INPUT TYPE="button" VALUE="Inherit (Show)"
+    onclick="layers.layer1.visibility='inherit'"> <P>
+    <B> Layer 1A: </B> <BR>
+    <INPUT TYPE="button" VALUE="Hide "
+    onclick="layers.layer1.layers.layer1A.visibility='hide'">
+    <INPUT TYPE="button" VALUE="Inherit"
+    onclick="layers.layer1.layers.layer1A.visibility='inherit'">
+    </FORM>
+    
