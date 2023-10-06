@@ -1,0 +1,25 @@
+<HEAD>
+<TITLE> Test JavaScript </TITLE>
+<SCRIPT Language="JavaScript">
+document.write(document.title+" <BR>");
+document.write(location.toString());
+</SCRIPT>
+</HEAD>
+Example 24 (a)
+<html>
+<head>
+<script language="JavaScript">
+<!-- hide
+function openWin() {
+myWin= open("bla.htm");
+}
+// -->
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Open new window"
+onClick="openWin()">
+</form>
+</body>
+</html>
